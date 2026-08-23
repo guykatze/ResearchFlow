@@ -204,3 +204,33 @@ hr.sep { border:0;border-top:1px solid var(--line);margin:18px 0; }
   .project-header-tools { width:100%; }
   .project-header-tools .button { flex:1; }
 }
+
+
+/* v0.4 organization additions */
+.dashboard-two { display:grid;grid-template-columns:1fr 1fr;gap:18px; }
+.project-tabs { display:flex;gap:5px;overflow-x:auto;margin:-8px 0 20px;padding-bottom:3px;border-bottom:1px solid var(--line); }
+.project-tab { border:0;background:transparent;padding:10px 14px;font-weight:650;color:var(--muted);border-bottom:2px solid transparent;white-space:nowrap; }
+.project-tab.active { color:var(--accent);border-bottom-color:var(--accent); }
+.progress-track { height:9px;border-radius:6px;background:#e2e2e7;overflow:hidden;margin:8px 0; }
+.progress-fill { height:100%;background:var(--accent);border-radius:6px; }
+.big-next { font-size:19px;font-weight:680;line-height:1.35; }
+.meeting-card { padding:16px 0;border-top:1px solid var(--line); }
+.meeting-card:first-child { border-top:0; }
+.meeting-top { display:flex;justify-content:space-between;gap:12px;align-items:flex-start; }
+.meeting-summary { margin-top:9px;line-height:1.45;white-space:pre-wrap; }
+.meeting-mini { margin-top:8px;color:var(--muted);font-size:13px; }
+.meeting-text { min-height:120px; }
+.gantt-axis { display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin:5px 0 10px;padding-left:220px; }
+.gantt-list { display:grid;gap:8px; }
+.gantt-row { display:grid;grid-template-columns:210px minmax(200px,1fr);gap:10px;align-items:center; }
+.gantt-label { min-width:0; }
+.gantt-label .row-button { padding-left:0;text-align:left;font-weight:650;color:var(--text); }
+.gantt-track { height:26px;background:repeating-linear-gradient(90deg,#f2f2f4 0,#f2f2f4 calc(25% - 1px),#dddde2 calc(25% - 1px),#dddde2 25%);border-radius:6px;position:relative;overflow:hidden; }
+.gantt-bar { position:absolute;top:5px;height:16px;min-width:8px;border-radius:5px;background:var(--accent);color:white;text-align:center;font-size:11px;line-height:16px; }
+.gantt-bar.donebar { background:var(--success); }
+@media (max-width:760px){
+  .dashboard-two { grid-template-columns:1fr; }
+  .gantt-axis { padding-left:0; }
+  .gantt-row { grid-template-columns:1fr;gap:4px; }
+  .gantt-track { height:24px; }
+}
