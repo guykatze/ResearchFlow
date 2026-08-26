@@ -246,3 +246,15 @@ hr.sep { border:0;border-top:1px solid var(--line);margin:18px 0; }
 .field-label-row { display:flex;align-items:center;justify-content:space-between;gap:10px; }
 .small-empty { padding:10px 0; }
 @media (max-width:760px){ .multi-project-picker {grid-template-columns:1fr;} .meeting-notes {min-height:280px;} }
+
+
+/* v0.4.3 automatic Hebrew / LTR alignment */
+textarea[dir="rtl"], input[dir="rtl"] { text-align:right !important; }
+textarea[dir="ltr"], input[dir="ltr"] { text-align:left !important; }
+.row-title[dir="rtl"], .meeting-summary[dir="rtl"], .big-next[dir="rtl"],
+.page-title[dir="rtl"], .page-subtitle[dir="rtl"], .project-link .name[dir="rtl"],
+.gantt-label .row-button[dir="rtl"], .row-meta[dir="rtl"] { text-align:right; }
+.row-title[dir="ltr"], .meeting-summary[dir="ltr"], .big-next[dir="ltr"],
+.page-title[dir="ltr"], .page-subtitle[dir="ltr"], .project-link .name[dir="ltr"],
+.gantt-label .row-button[dir="ltr"], .row-meta[dir="ltr"] { text-align:left; }
+.meeting-summary, .project-notes, .meeting-notes { unicode-bidi: plaintext; }
