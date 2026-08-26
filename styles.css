@@ -234,3 +234,15 @@ hr.sep { border:0;border-top:1px solid var(--line);margin:18px 0; }
   .gantt-row { grid-template-columns:1fr;gap:4px; }
   .gantt-track { height:24px; }
 }
+
+
+/* v0.4.2 meeting improvements */
+.multi-project-picker { display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;padding:10px;border:1px solid var(--line);border-radius:12px;background:var(--surface-soft,#f7f7f9); }
+.multi-project-option { display:flex;align-items:center;gap:9px;padding:8px 10px;border-radius:9px;cursor:pointer; }
+.multi-project-option:hover { background:rgba(0,0,0,.035); }
+.multi-project-option input { width:18px;height:18px; }
+.meeting-notes { min-height:240px;line-height:1.5;resize:vertical; }
+.field-help { color:var(--muted);font-size:12px;line-height:1.4;margin:3px 0 8px; }
+.field-label-row { display:flex;align-items:center;justify-content:space-between;gap:10px; }
+.small-empty { padding:10px 0; }
+@media (max-width:760px){ .multi-project-picker {grid-template-columns:1fr;} .meeting-notes {min-height:280px;} }
