@@ -258,3 +258,35 @@ textarea[dir="ltr"], input[dir="ltr"] { text-align:left !important; }
 .page-title[dir="ltr"], .page-subtitle[dir="ltr"], .project-link .name[dir="ltr"],
 .gantt-label .row-button[dir="ltr"], .row-meta[dir="ltr"] { text-align:left; }
 .meeting-summary, .project-notes, .meeting-notes { unicode-bidi: plaintext; }
+
+
+/* v0.4.7 per-project meeting action items */
+.meeting-action-rows { display:grid;gap:9px;margin-top:10px; }
+.meeting-action-row {
+  display:grid;
+  grid-template-columns:minmax(240px,1fr) minmax(170px,260px) auto;
+  gap:8px;
+  align-items:center;
+}
+.meeting-action-project { min-width:0; }
+.meeting-action-remove { white-space:nowrap; }
+.meeting-existing-actions {
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+}
+.meeting-existing-action {
+  padding:10px 12px;
+  border-top:1px solid var(--line);
+}
+.meeting-existing-action:first-child { border-top:0; }
+
+@media (max-width:760px){
+  .meeting-action-row {
+    grid-template-columns:1fr;
+    padding:10px;
+    border:1px solid var(--line);
+    border-radius:12px;
+  }
+  .meeting-action-remove { justify-self:start; }
+}
