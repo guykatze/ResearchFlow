@@ -290,3 +290,15 @@ textarea[dir="ltr"], input[dir="ltr"] { text-align:left !important; }
   }
   .meeting-action-remove { justify-self:start; }
 }
+
+
+/* v0.4.8 robust consecutive task entry */
+.quick-task-add {
+  display:grid;
+  grid-template-columns:minmax(180px,1fr) auto;
+  gap:8px;
+  margin:8px 0 16px;
+}
+@media (max-width:600px){
+  .quick-task-add { grid-template-columns:1fr auto; }
+}

@@ -1,10 +1,10 @@
 
-const CACHE = "researchflow-v0.4.7";
+const CACHE = "researchflow-v0.4.8";
 const CORE = [
   "./",
   "./index.html",
   "./styles.css",
-  "./app-v0.4.7.js",
+  "./app-v0.4.8.js",
   "./manifest.webmanifest",
   "./icons/icon-180.png",
   "./icons/icon-192.png",
