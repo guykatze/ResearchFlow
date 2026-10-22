@@ -507,3 +507,31 @@ textarea[dir="ltr"], input[dir="ltr"] { text-align:left !important; }
   .lab-edit-fields,
   .lab-edit-row[data-lab-type="other"] .lab-edit-fields { grid-template-columns:1fr; }
 }
+
+
+/* v0.6.4 Matrix task deletion */
+.matrix-task-card {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:8px;
+  align-items:center;
+}
+.matrix-task-main {
+  min-width:0;
+  border:0;
+  background:transparent;
+  padding:0;
+  text-align:left;
+  color:inherit;
+  cursor:pointer;
+}
+.matrix-task-actions {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.danger-text { color:#b3261e; }
+@media (max-width:600px){
+  .matrix-task-card { grid-template-columns:1fr; }
+  .matrix-task-actions { justify-content:flex-start; }
+}
