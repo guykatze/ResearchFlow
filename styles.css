@@ -302,3 +302,103 @@ textarea[dir="ltr"], input[dir="ltr"] { text-align:left !important; }
 @media (max-width:600px){
   .quick-task-add { grid-template-columns:1fr auto; }
 }
+
+
+/* v0.5.0 Eisenhower Matrix */
+.matrix-fields { margin-top:4px; }
+.matrix-badge {
+  display:inline-flex;
+  align-items:center;
+  padding:2px 7px;
+  border-radius:999px;
+  font-size:11px;
+  font-weight:700;
+  border:1px solid var(--line);
+}
+.matrix-do { background:#fff0ef; }
+.matrix-schedule { background:#eef4ff; }
+.matrix-delegate { background:#fff7e6; }
+.matrix-later { background:#f1f1f4; }
+
+.matrix-axis-top {
+  display:grid;
+  grid-template-columns:90px 1fr 1fr;
+  gap:12px;
+  margin:0 0 6px;
+  color:var(--muted);
+  text-align:center;
+  font-size:13px;
+}
+.matrix-layout {
+  display:grid;
+  grid-template-columns:78px minmax(0,1fr);
+  gap:12px;
+}
+.matrix-axis-side {
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:12px;
+  color:var(--muted);
+  font-size:13px;
+}
+.matrix-axis-side strong {
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+  justify-self:center;
+  align-self:center;
+}
+.matrix-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+.matrix-quadrant {
+  border:1px solid var(--line);
+  border-radius:14px;
+  min-height:190px;
+  padding:14px;
+  background:var(--panel, #fff);
+}
+.matrix-q-do { border-top:4px solid #d85b52; }
+.matrix-q-schedule { border-top:4px solid #5c7fc6; }
+.matrix-q-delegate { border-top:4px solid #c58a2c; }
+.matrix-q-later { border-top:4px solid #8a8a93; }
+.matrix-q-head {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:10px;
+}
+.matrix-q-head h3 { margin:0;font-size:17px; }
+.matrix-q-sub { color:var(--muted);font-size:12px;margin-top:2px; }
+.matrix-count {
+  min-width:26px;height:26px;border-radius:13px;
+  display:inline-flex;align-items:center;justify-content:center;
+  background:#f1f1f4;font-size:12px;font-weight:700;
+}
+.matrix-task-list { display:grid;gap:7px; }
+.matrix-task-card {
+  width:100%;
+  border:1px solid var(--line);
+  border-radius:10px;
+  background:#fff;
+  padding:9px 10px;
+  text-align:left;
+  cursor:pointer;
+  color:inherit;
+}
+.matrix-task-card:hover { background:#f8f8fa; }
+.matrix-task-title { display:block;font-weight:650;line-height:1.3; }
+.matrix-task-meta { display:block;color:var(--muted);font-size:11px;margin-top:4px;line-height:1.35; }
+.matrix-empty { color:var(--muted);font-size:13px;padding:14px 4px; }
+.matrix-unassigned { margin-top:16px; }
+.matrix-unassigned .matrix-task-card { margin-top:7px; }
+
+@media (max-width:760px){
+  .matrix-axis-top { display:none; }
+  .matrix-layout { display:block; }
+  .matrix-axis-side { display:none; }
+  .matrix-grid { grid-template-columns:1fr; }
+  .matrix-quadrant { min-height:0; }
+}
