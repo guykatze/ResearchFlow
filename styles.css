@@ -402,3 +402,108 @@ textarea[dir="ltr"], input[dir="ltr"] { text-align:left !important; }
   .matrix-grid { grid-template-columns:1fr; }
   .matrix-quadrant { min-height:0; }
 }
+
+
+/* v0.6.0 Laboratory Inquiries */
+.clinical-warning {
+  margin:0 0 16px;
+  padding:10px 12px;
+  border:1px solid #e5c98a;
+  background:#fff8e8;
+  border-radius:10px;
+  font-size:12px;
+  color:#6f571c;
+  line-height:1.4;
+}
+.lab-inquiry-card {
+  border-top:1px solid var(--line);
+  padding:15px 0;
+  cursor:pointer;
+}
+.lab-inquiry-card:first-child { border-top:0; }
+.lab-inquiry-card:hover { background:rgba(0,0,0,.015); }
+.lab-inquiry-head {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  margin-bottom:10px;
+}
+.lab-overall {
+  display:inline-flex;
+  padding:4px 9px;
+  border-radius:999px;
+  background:#edf4ff;
+  font-size:11px;
+  font-weight:700;
+  white-space:nowrap;
+}
+.lab-overall.needs-update { background:#fff0e8; }
+.lab-overall.complete { background:#edf7ef; }
+.lab-test-grid { display:grid;gap:7px; }
+.lab-test-row {
+  display:grid;
+  grid-template-columns:minmax(180px,1fr) minmax(180px,auto);
+  gap:12px;
+  padding:9px 10px;
+  border:1px solid var(--line);
+  border-radius:10px;
+}
+.lab-test-row.stale { border-left:4px solid #c9782b; }
+.lab-test-status {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:4px;
+}
+.lab-status {
+  display:inline-flex;
+  align-items:center;
+  padding:3px 7px;
+  border-radius:999px;
+  background:#f1f1f4;
+  font-size:11px;
+  font-weight:700;
+}
+.lab-progress { background:#edf4ff; }
+.lab-result { background:#fff4d8; }
+.lab-complete { background:#eaf6ed; }
+.lab-cancelled { background:#f1f1f1; color:var(--muted); }
+.lab-patient-note {
+  margin-top:10px;
+  color:var(--muted);
+  font-size:13px;
+  white-space:pre-wrap;
+}
+.lab-edit-list { display:grid;gap:9px;margin-top:8px; }
+.lab-edit-row {
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:10px;
+}
+.lab-check-label {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-weight:650;
+}
+.lab-check-label input { width:18px;height:18px; }
+.lab-edit-fields {
+  display:grid;
+  grid-template-columns:minmax(150px,220px) minmax(150px,190px) minmax(180px,1fr);
+  gap:8px;
+  margin-top:10px;
+  align-items:center;
+}
+.lab-edit-row[data-lab-type="other"] .lab-edit-fields {
+  grid-template-columns:minmax(180px,1fr) minmax(150px,220px) minmax(150px,190px) minmax(180px,1fr);
+}
+.lab-edit-fields.hidden { display:none; }
+
+@media (max-width:760px){
+  .lab-inquiry-head { align-items:flex-start; }
+  .lab-test-row { grid-template-columns:1fr; }
+  .lab-test-status { align-items:flex-start; }
+  .lab-edit-fields,
+  .lab-edit-row[data-lab-type="other"] .lab-edit-fields { grid-template-columns:1fr; }
+}
